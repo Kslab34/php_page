@@ -1,0 +1,37 @@
+<?php
+$name = $_POST["name"];
+$age = $_POST["age"];
+$address = $_POST["address"];
+$state = $_POST["state"];
+$sex = $_POST["sex"];
+//prints blue if "male", pink if anything else
+if (strcmp($sex,'male')==0) {
+	echo '<body style="background-color:blue">';
+}	
+else {
+	echo '<body style="background-color:pink">';
+}
+
+echo "<br>";
+//prints the reults 
+printf("Name: %s
+       <br>Age: %u
+       <br>Address: %s
+       <br>State: %s
+       <br>Sex: %s",
+      $name,$age,$address,$state,$sex);
+echo "<br><br> The years: <br>";
+
+//loops through the years and prints them
+for ($x = 0; $x <= $age; $x++) {
+   echo (2017-$x);
+echo "<br>";
+}
+echo"<br>";
+
+//this section prints the txt file
+$my_file = file_get_contents("PostPage.txt");
+printf("</br>%s", $my_file);
+
+?>
+</body>
