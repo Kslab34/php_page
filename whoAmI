@@ -1,0 +1,17 @@
+<form method='post' action='whoAreYou.php'>
+    
+Name: <input type='text' name='name' /><br />
+
+Age: <input type='text' name='age' /><br />
+
+Address: <input type='text' name='address' /><br />
+  
+State: <input type='text' name='state'/><br />
+  
+Sex: <input type='text' name='sex'/><br />
+
+<input type='hidden' name='articleid' id='articleid' value='<? echo $_GET["id"]; ?>' />
+
+<input type='submit' value='Submit' />
+
+</form>
